@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="RmonTronrec_UniveralWindows.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RmonTronrec_UniveralWindows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:FieldModifier="Friend" x:Name="PlayerFormGrid" Background="Black" x:DefaultBindMode="TwoWay" >
+        <Viewbox>
+            <TextBlock x:FieldModifier="Friend" x:DefaultBindMode="TwoWay" x:Name="LapCount"  Text="{x:Bind lapcountString, Mode=OneWay}" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  FocusVisualPrimaryBrush="White" Foreground="White" />
+        </Viewbox>
+        <StackPanel x:Name="SettingsPanel" Background="White" HorizontalAlignment="Left" Height="555" Margin="10,142,0,0" VerticalAlignment="Top" Width="292" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+            <StackPanel.RenderTransform>
+                <CompositeTransform Rotation="0.067"/>
+            </StackPanel.RenderTransform>
+            <Button x:Name="exitbut" Content="Exit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClickMode="Press" Margin="0,0,0,0"/>
+            <TextBlock x:Name="textBlockIP" Text="IP Address" TextWrapping="Wrap"/>
+            <TextBox x:Name="textBox1" Text="10.37.37.198"/>
+            <Button x:Name="button1" Content="Connect" HorizontalAlignment="Stretch" ClickMode="Press" VerticalAlignment="Stretch"/>
+            <Button x:Name="button2" Content="Disconnect" HorizontalAlignment="Stretch" ClickMode="Press" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="ConnectionStatus" Text="Disconnected" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI" Height="199" Margin="0,0,0,0"/>
+            <TextBox x:Name="TextBox2" Text="TextBox" Height="158" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        </StackPanel>
+    </Grid>
+</Page>
