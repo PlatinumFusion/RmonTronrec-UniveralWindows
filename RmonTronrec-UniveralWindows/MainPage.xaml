@@ -9,19 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid x:FieldModifier="Friend" x:Name="PlayerFormGrid" Background="Black" x:DefaultBindMode="TwoWay" >
         <Viewbox>
-            <TextBlock x:FieldModifier="Friend" x:DefaultBindMode="TwoWay" x:Name="LapCount"  Text="{x:Bind lapcountString, Mode=OneWay}" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  FocusVisualPrimaryBrush="White" Foreground="White" />
+            <TextBlock x:FieldModifier="Friend" x:DefaultBindMode="TwoWay" x:Name="LapCount"  Text="{x:Bind LapCount.Text, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  FocusVisualPrimaryBrush="White" Foreground="White" />
         </Viewbox>
-        <StackPanel x:Name="SettingsPanel" Background="White" HorizontalAlignment="Left" Height="555" Margin="10,142,0,0" VerticalAlignment="Top" Width="292" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" >
-            <StackPanel.RenderTransform>
-                <CompositeTransform Rotation="0.067"/>
-            </StackPanel.RenderTransform>
-            <Button x:Name="exitbut" Content="Exit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClickMode="Press" Margin="0,0,0,0"/>
+        <StackPanel x:Name="SettingsPanel" Background="White" HorizontalAlignment="Left" Height="585" Margin="10,142,0,0" VerticalAlignment="Top" Width="292" RenderTransformOrigin="0,0" UseLayoutRounding="False" d:LayoutRounding="Auto" CanDrag="True" >
+            <Button x:Name="exitbut" Content="Exit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClickMode="Press" Margin="0,0,0,0" Background="#33000000"/>
             <TextBlock x:Name="textBlockIP" Text="IP Address" TextWrapping="Wrap"/>
             <TextBox x:Name="textBox1" Text="10.37.37.198"/>
-            <Button x:Name="button1" Content="Connect" HorizontalAlignment="Stretch" ClickMode="Press" VerticalAlignment="Stretch"/>
-            <Button x:Name="button2" Content="Disconnect" HorizontalAlignment="Stretch" ClickMode="Press" VerticalAlignment="Stretch"/>
+            <Button x:Name="button1"  Content="Connect" HorizontalAlignment="Stretch" ClickMode="Press" Click="Button1_Click" VerticalAlignment="Stretch" Visibility="Visible" Background="#330FD42A"/>
+            <Button x:Name="button2" Content="Disconnect" HorizontalAlignment="Stretch" ClickMode="Press" Click="Button2_Click" VerticalAlignment="Stretch" Background="#33EC370F"/>
             <TextBlock x:Name="ConnectionStatus" Text="Disconnected" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI" Height="199" Margin="0,0,0,0"/>
-            <TextBox x:Name="TextBox2" Text="TextBox" Height="158" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="TextBox2" Text="TextBox" Height="68"/>
+            <AppBarButton x:Name="appBarButton" HorizontalAlignment="Stretch" Icon="Accept" Label="Connect" VerticalAlignment="Stretch" ClickMode="Press" Click="Button1_Click"/>
         </StackPanel>
+
     </Grid>
 </Page>
